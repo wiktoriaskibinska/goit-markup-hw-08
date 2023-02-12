@@ -1,0 +1,26 @@
+body {
+  font-family: $primaryFont;
+  color: $secondaryColor;
+  background-color: $tertiaryColor;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  position: relative;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.section {
+  padding: 94px 0;
+}
+.icon {
+  fill: $iconsColor;
+}
+img{display: block;}

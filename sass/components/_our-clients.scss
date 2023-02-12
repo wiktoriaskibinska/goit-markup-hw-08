@@ -1,0 +1,31 @@
+.ourclients {
+  &__tittle {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+  }
+  &__item {
+    border: $iconsColor 1px solid;
+    border-radius: 4px;
+    transition: color $transDurTim, border $transDurTim;
+    &:hover {
+      border: 1px solid $accentColor;
+      border-radius: 4px;
+
+      & svg {
+        fill: $accentColor;
+      }
+    }
+  }
+  &__icon {
+    margin: 16px 32px 16px 32px;
+    transition: fill $transDurTim;
+  }
+}

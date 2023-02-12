@@ -1,0 +1,76 @@
+.header {
+  border-bottom: 1px solid $borderHeaderColor;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    align-items: center;
+  }
+  &__nav {
+    display: flex;
+  }
+  &__menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu-item:not(:last-child) {
+    padding-right: 46px;
+  }
+  &__menu-link {
+    text-decoration: none;
+    color: $primaryColor;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 1.17;
+    transition: color $transDurTim;
+    &:hover {
+      color: $accentColor;
+    }
+  }
+  &__contact-list {
+    display: flex;
+  }
+  &__contact-item:not(:last-child) {
+    padding-right: 50px;
+  }
+  &__contact-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color $transDurTim;
+    color: $textcolor;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      color: $accentColor;
+      & svg {
+        fill: $accentColor;
+        transition: fill $transDurTim;
+      }
+    }
+  }
+  &__icon {
+    margin-right: 10px;
+     transition: fill $transDurTim;
+  }
+}
+.is-active {
+  position: relative;
+  &::after {
+    content: "";
+    background-color: $accentColor;
+    width: 53px;
+    height: 4px;
+    border-radius: 2px;
+    position: absolute;
+    top: 48px;
+    display: block;
+  }
+}
+.is-active--second {
+  &::after {
+    @extend .is-active;
+    width: 58px;
+  }
+}

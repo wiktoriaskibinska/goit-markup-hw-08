@@ -1,0 +1,35 @@
+.what-we-do {
+  &__tittle {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__card {
+    position: relative;
+  }
+  &__label {
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $tertiaryColor;
+    background-color: rgba(47, 48, 58, 0.8);
+    padding-bottom: 27px;
+    padding-top: 27px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
+.what-we-do.section {
+  padding-bottom: 84px;
+  padding-top: 0;
+}
