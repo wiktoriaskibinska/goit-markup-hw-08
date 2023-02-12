@@ -1,12 +1,12 @@
 .logo {
   font-family: $secondaryFont;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.38;
   color: $primaryColor;
   text-decoration: none;
-  margin-right: 93px;
- 
+  margin-right: 0px;
+
   &__first-part {
     color: $accentColor;
   }
@@ -16,19 +16,13 @@
     line-height: 0.9;
     margin-bottom: 23px;
     display: inline-block;
-   
   }
   &__second-part--white {
     color: $tertiaryColor;
   }
-  @include tablet {
-    &__footer {
-      font-size: 26px;
-    }
-  }
+
   @include desktop {
-    &__footer{
-      font-size: 26px;
-    }
+    font-size: 26px;
+     margin-right: 93px;
   }
 }

@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
   }
   &__figcaption {
     border-bottom: 1px solid #eeeeee;
@@ -29,6 +30,7 @@
     margin: 0 24px 20px 24px;
   }
   &__item {
+    max-width:370px;
     position: relative;
     overflow: hidden;
     transition: box-shadow $transDurTim;
@@ -36,7 +38,16 @@
       transform: translateY(0);
     }
     &:hover {
-      box-shadow:0px 4px 4px  $boxShadow;
+      box-shadow: 0px 4px 4px $boxShadow;
+    }
+  }
+  @include tablet {
+    &__list {
+      flex-basis: calc((100% - 30px) / 2);
+      justify-content: left;
+    }
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
     }
   }
 }
@@ -44,7 +55,7 @@
   min-height: 294px;
   padding: 49px 24px 49px 45px;
   transform: translateY(100%);
-  width: 370px;
+  width: 100%;
   position: absolute;
   top: 0;
   background-color: rgba(33, 150, 243, 0.9);

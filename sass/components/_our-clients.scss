@@ -7,13 +7,17 @@
     margin-bottom: 30px;
   }
   &__list {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
     flex-basis: calc((100% - 30px / 2));
   }
-  &__item {
+  &__item {display: flex;
+    justify-content: center;
+    
+    width: 210px;
     border: $iconsColor 1px solid;
     border-radius: 4px;
     transition: color $transDurTim, border $transDurTim;
@@ -34,6 +38,9 @@
     &__list {
       flex-basis: calc((100% - 2 * 30px / 3));
     }
+    &__item {
+      width: 226px;
+    }
   }
   @include desktop {
     &__tittle {
@@ -42,17 +49,11 @@
     }
     &__item {
       flex-wrap: nowrap;
+      width: auto;
     }
     &__list {
       justify-content: space-between;
       gap: 0;
     }
-  }
-}
-.ourclients.section {
-  padding: 60px 0 60px 0;
-
-  @include desktop {
-    padding: 94px 0 94px 0;
   }
 }

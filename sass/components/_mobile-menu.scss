@@ -1,0 +1,113 @@
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $tertiaryColor;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(150%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__close-svg {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    transition: fill $transDurTim;
+    &:hover,
+    &:focus {
+      fill: $accentColor;
+      cursor: pointer;
+    }
+  }
+  &__nav {
+    margin: 48px 0 0 30px;
+  }
+
+  &__menu-item:not(:last-child) {
+    margin-bottom: 36px;
+  }
+  &__menu-link {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 500;
+    color: $primaryColor;
+    display: inline-block;
+    transition: color $transDurTim;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+  &__contact {
+    margin-top: 150px;
+  }
+  &__contact,
+  &__socials {
+    margin-left: 30px;
+  }
+  &__contact-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__contact-item:nth-child(1) &__contact-link,
+  &__contact-item:nth-child(2) &__contact-link {
+    font-weight: 500;
+    line-height: 1.17;
+    text-decoration: none;
+  }
+  &__contact-item:nth-child(1) &__contact-link {
+    font-size: 34px;
+    color: $accentColor;
+  }
+  &__contact-item:nth-child(2) &__contact-link {
+    font-size: 24px;
+    color: $textcolor;
+  }
+  &__socials {
+    display: flex;
+    margin-bottom: 58px;
+  }
+  &__social:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__social {
+    position: relative;
+  }
+  &__social:not(:last-child)::after {
+    content: "";
+    width: 22px;
+    height: 0;
+    border: 1px solid $formInput;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: rotate(90deg);
+  }
+  &__social:nth-child(1)::after {
+    left: 85px;
+  }
+  &__social:nth-child(2)::after {
+    left: 58px;
+  }
+  &__social:nth-child(3)::after {
+    left: 82px;
+  }
+  &__social-link {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: $accentColor;
+ text-decoration: none;
+  }
+  &__menu-link--active {
+    color: $accentColor;
+  }
+}

@@ -2,9 +2,14 @@
   &__list {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
+  }
+  &__item {
+    text-align: center;
   }
 
   &__background {
+    text-align: center;
     background-color: $bgTeamDescribtion;
     margin-bottom: 30px;
     border-radius: 4px;
@@ -25,7 +30,21 @@
     line-height: 1.71;
   }
   @include tablet {
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__item {
+      text-align: justify;
+      flex-basis: calc((100% - 30px) / 2);
+    }
   }
+
   @include desktop {
+    &__list {
+      flex-wrap: nowrap;
+    }
+    &__item {
+      text-align: justify;
+    }
   }
 }

@@ -3,56 +3,94 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    padding: 24px 0;
+    padding: 16px 0;
     align-items: center;
   }
   &__nav {
-    display: flex;
+    justify-content: space-around;
   }
   &__menu-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__menu-item:not(:last-child) {
-    padding-right: 46px;
-  }
-  &__menu-link {
-    text-decoration: none;
-    color: $primaryColor;
-    font-weight: 500;
-    cursor: pointer;
-    line-height: 1.17;
-    transition: color $transDurTim;
-    &:hover {
-      color: $accentColor;
-    }
+    display: none;
   }
   &__contact-list {
-    display: flex;
+    display: none;
   }
-  &__contact-item:not(:last-child) {
-    padding-right: 50px;
-  }
-  &__contact-link {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: color $transDurTim;
-    color: $textcolor;
-    font-weight: 500;
-    cursor: pointer;
-    &:hover {
-      color: $accentColor;
-      & svg {
-        fill: $accentColor;
-        transition: fill $transDurTim;
+
+  &__menu-svg{display: block;
+  cursor: pointer;}
+
+  @include tablet {
+    &__container {
+      padding: 24px 0;
+    }
+    &__nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__menu-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__menu-item:not(:last-child) {
+      padding-right: 46px;
+    }
+    &__menu-link {
+      text-decoration: none;
+      color: $primaryColor;
+      font-weight: 500;
+      cursor: pointer;
+      line-height: 1.17;
+      transition: color $transDurTim;
+      &:hover {
+        color: $accentColor;
       }
     }
+    &__contact-list {
+      display: block;
+      margin-top: 10px;
+    }
+    &__contact-item:not(:last-child) {
+      padding-right: 0px;
+    }
+    &__contact-link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      transition: color $transDurTim;
+      color: $textcolor;
+      font-weight: 500;
+      cursor: pointer;
+      &:hover {
+        color: $accentColor;
+        & svg {
+          fill: $accentColor;
+          transition: fill $transDurTim;
+        }
+      }
+    }
+    &__icon {
+      margin-right: 10px;
+      transition: fill $transDurTim;
+    }
+    &__menu-svg {
+      display: none;
+    }
   }
-  &__icon {
-    margin-right: 10px;
-     transition: fill $transDurTim;
+  @include desktop {
+    &__contact-list {
+      display: flex;
+    }
+    &__contact-item:not(:last-child) {
+      padding-right: 50px;
+    }
+    &__menu-list {
+      margin-right: 345px;
+    }
+    &__menu-svg {
+      display: none;
+    }
   }
 }
 .is-active {

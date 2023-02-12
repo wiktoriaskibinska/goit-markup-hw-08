@@ -21,7 +21,6 @@
     &:focus-within {
       fill: $accentColor;
       transition: fill $transDurTim;
-
     }
   }
   &__button {
@@ -114,7 +113,7 @@
   }
   &__label {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $textcolor;
@@ -135,6 +134,11 @@
       border: none;
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' fill='none'%3E%3Crect width='16' height='15' fill='%232196F3' rx='2'/%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.2' d='m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z'/%3E%3C/svg%3E");
       background-size: contain;
+    }
+  }
+  @include desktop {
+    &__label {
+      font-size: 14px;
     }
   }
 }
