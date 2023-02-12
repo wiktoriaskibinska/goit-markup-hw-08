@@ -3,7 +3,7 @@
     display: flex;
     gap: 30px;
   }
-  
+
   &__background {
     background-color: $bgTeamDescribtion;
     margin-bottom: 30px;
@@ -23,5 +23,9 @@
     color: $textcolor;
     font-weight: 400;
     line-height: 1.71;
+  }
+  @include tablet {
+  }
+  @include desktop {
   }
 }
