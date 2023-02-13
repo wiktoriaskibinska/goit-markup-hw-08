@@ -13,12 +13,11 @@
     gap: 30px;
     justify-content: center;
     flex-basis: calc((100% - 30px / 2));
-    
   }
-  &__item {display: flex;
+  &__item {
+    display: flex;
     justify-content: center;
-    
-    width: 210px;
+    width: 40%;
     border: $iconsColor 1px solid;
     border-radius: 4px;
     transition: color $transDurTim, border $transDurTim;

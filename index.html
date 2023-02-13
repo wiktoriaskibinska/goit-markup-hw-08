@@ -69,7 +69,7 @@
           </nav>
           <div>
             <svg
-              class=" header__menu-svg js-open-menu"
+              class="header__menu-svg js-open-menu"
               aria-expanded="false"
               aria-controls="mobile-menu"
               width="40"
@@ -155,30 +155,57 @@
           <ul class="what-we-do__list">
             <li class="what-we-do__card">
               <p class="what-we-do__label">Aplikacje komputerowe</p>
-              <img
-                src="images/pracujacyprogramista(1).jpg"
-                alt="Programista kodujący przy komputerze"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/workingcoder@1x.jpg 1x,
+                    ./images/workingcoder@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="images/workingcoder@1x.jpg"
+                  alt="Programista kodujący przy komputerze"
+                  width="370"
+                  height="294"
+                />
+              </picture>
             </li>
             <li class="what-we-do__card">
               <p class="what-we-do__label">Aplikacje mobilne</p>
+                <picture>
+                <source
+                  srcset="
+                    ./images/graphicdesigner@1x.jpg 1x,
+                    ./images/graphicdesigner@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
               <img
-                src="images/programistaztelefonem.jpg"
-                alt="Programista trzyma w ręku telefon"
-                width="370"
-                height="294"
-              />
-            </li>
-            <li class="what-we-do__card">
-              <p class="what-we-do__label">Rozwiązania graficzne</p>
-              <img
-                src="images/programistawybierajacykolor.jpg"
+                src="images/graphicdesigner@1x.jpg"
                 alt="programista wybiera kolor z palety kolorow"
                 width="370"
                 height="294"
               />
+                </picture>
+            </li>
+            <li class="what-we-do__card">
+              <p class="what-we-do__label">Rozwiązania graficzne</p>
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobiledesign@1x.jpg 1x,
+                    ./images/mobiledesign@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+              <img
+                src="images/mobiledesign@1x.jpg"
+                alt="Programista trzyma w ręku telefon"
+                width="370"
+                height="294"
+              />
+              </picture>
             </li>
           </ul>
         </div>
@@ -580,7 +607,7 @@
       <svg class="mobile__close-svg js-close-menu" width="18.6" height="18.6">
         <use href="./images/icon.svg#close"></use>
       </svg>
-       <nav class="mobile__nav">
+      <nav class="mobile__nav">
         <ul class="mobile__menu">
           <li class="mobile__menu-item">
             <a

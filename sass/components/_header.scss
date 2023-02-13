@@ -1,5 +1,6 @@
 .header {
   border-bottom: 1px solid $borderHeaderColor;
+  padding: 0 15px;
   &__container {
     display: flex;
     justify-content: space-between;
@@ -16,8 +17,15 @@
     display: none;
   }
 
-  &__menu-svg{display: block;
-  cursor: pointer;}
+  &__menu-svg {
+    display: block;
+    cursor: pointer;
+    transition: fill $transDurTim;
+    &:hover,
+    :focus-within {
+      fill: $accentColor;
+    }
+  }
 
   @include tablet {
     &__container {

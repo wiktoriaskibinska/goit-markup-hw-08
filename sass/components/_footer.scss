@@ -7,6 +7,8 @@
     padding-top: 60px;
     padding-bottom: 60px;
     justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   &__element:not(:first-child) {
     padding-top: 8px;
@@ -67,12 +69,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
   }
   &__newsletter-input {
     width: 100%;
     height: 50px;
-    margin: 0 15px 0 15px;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -114,6 +115,7 @@
   @include tablet {
     &__newsletter-input {
       width: 450px;
+      margin-right: 15px;
     }
     &__newsletter-button {
       margin-top: 0px;

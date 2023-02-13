@@ -1,9 +1,11 @@
 .describtion {
+  padding-left: 15px;
+  padding-right: 15px;
   &__list {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    margin: 0 15px;
+    
   }
   &__item {
     text-align: center;
